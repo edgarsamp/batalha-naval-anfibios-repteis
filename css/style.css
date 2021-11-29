@@ -1,0 +1,106 @@
+:root {
+    --blue: #005AA7;
+    --dark-blue: #003249;
+    --light-blue: #84BDDB;
+    --white: #E5F3F3;
+  }
+
+body{
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Acme', sans-serif;
+    background-image: url("../img/background.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.pagina{
+    display: flex;
+
+    height: 100vh;
+
+}
+
+.jogo{
+    width: 585px;
+    height: 560px;
+    background-color: var(--blue);
+    
+	display: grid;
+	grid-template-columns: repeat(5, 100px);
+	grid-template-rows: repeat(5, 100px);
+	grid-gap: 10px;
+
+    margin: auto;
+    padding-top: 15px;
+	justify-content: center;
+
+    border-radius: 10px;
+
+}
+
+.card{
+    background-color: var(--light-blue);
+    color: var(--white);
+    border-radius: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+.card:hover{
+    background-color: var(--white);
+    color: var(--light-blue);
+    border-radius: 5px;
+}
+
+.card .frente{
+    position: absolute;
+    backface-visibility: hidden;
+    height: 30px;
+    text-align: right;
+    font-size: 30px;
+    margin-top: 70px;
+    margin-right: 5px;
+
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.card .verso{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    font-size: 30px;
+    transform: rotateY(180deg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.card .narval{
+    background-image: url("../img/narval.svg");
+}
+
+.card .bomba{
+    background-image: url("../img/bomba.svg");
+}
+
+.card .questao{
+    background-image: url("../img/questao.svg");
+    background-size: 35%;
+}
+
+.flipCard{
+    transform: rotateY(180deg);
+}
+
+.revelado{
+    visibility: hidden;
+}
+
+.descr {
+    width: 30vw;
+}
