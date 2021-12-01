@@ -200,18 +200,14 @@ header{
     justify-content: space-around;
 }
 
-.pontos .mais{
+.pontos .mais img{
     width: 40px;
     height: 40px;
-    background-image: url("../img/mais.png");
-    background-size: 40px;
 }
 
-.pontos .menos{
+.pontos .menos img{
     width: 40px;
     height: 40px;
-    background-image: url("../img/menos.png");
-    background-size: 40px;
 }
 
 .creditos{
