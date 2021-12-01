@@ -6,7 +6,6 @@
   }
 
 body{
-    /* font-family: 'Roboto', sans-serif; */
     font-family: 'Acme', sans-serif;
     background-image: url("../img/background.svg");
     background-repeat: no-repeat;
@@ -15,9 +14,7 @@ body{
 
 .pagina{
     display: flex;
-
     height: 100vh;
-
 }
 
 .jogo{
@@ -80,19 +77,6 @@ body{
     justify-content: center;
 
 }
-/* 
-.card .narval{
-    background-image: url("../img/narval.svg");
-}
-
-.card .bomba{
-    background-image: url("../img/bomba.svg");
-}
-
-.card .questao{
-    background-image: url("../img/questao.svg");
-    background-size: 35%;
-} */
 
 .card img{
     max-height: 70px;
@@ -105,10 +89,81 @@ body{
     transform: rotateY(180deg);
 }
 
-.revelado{
-    visibility: hidden;
+.descr {
+    width: 35vw;
 }
 
-.descr {
-    width: 30vw;
+.descr .infos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.descr .infos img{
+    height: 50px;
+    width: 50px;
+}
+
+.descr .infos:first-child{
+    margin-top: 100px;
+}
+
+.descr .infos div{
+    display: flex;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.descr .infos h2{
+    width: 200px;
+    font-size: 25px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.descr .infos .pontos{
+    height: 175px;
+    width: 100%;
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: initial;
+
+    display: flex;
+    
+    text-align: center;
+}
+
+.sep{
+    width: 5px;
+    height: 90%;
+    background: #e5f3f383;
+}
+
+.time1 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.time2 {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pontos h1{
+    text-align: center;
+    font-size: 75px;
+    margin: 10px;
+}
+
+.pontos h3{
+    text-align: center;
 }
