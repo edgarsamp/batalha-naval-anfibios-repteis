@@ -2,10 +2,30 @@ const QUANTIDADE_CELULAS = 25
 const QUANTIDADE_BOMBAS = 10
 const QUANTIDADE_NARVAL = 3
 const QUANTIDADE_QUESTOES = 12
+let contQuestoes = 1
+let revelando = false
 
 function revela(i){
+    if (revelando) return
+
     const card = document.getElementById(i)
     card.classList.toggle("flipCard")
+    revelando = true
+    if (retornaConteudoCarta(i) == "questao"){
+        setTimeout(function(){
+            const headerQuestao = document.querySelector(".questao header")
+            headerQuestao.innerHTML = "Questão " + contQuestoes
+            contQuestoes++
+
+            const questaoConteudo = document.querySelector(".questao .texto")
+
+            document.querySelector(`.questoes`).style.display = "flex"
+            revelando = false
+        }, 1000);
+    }else
+        setTimeout(() => revelando = false, 1000)
+    
+    
 }
 
 function constroiJogo(){
@@ -50,6 +70,35 @@ function retornaConteudoCarta(id){
     else if (index < QUANTIDADE_NARVAL + QUANTIDADE_BOMBAS)
         return 'narval'
     return 'questao'
+}
+
+function mudarNome(id){
+    headerElement = document.querySelector(`.time${id} header`)
+    var novoNome = prompt(`Digite o novo nome para a equipe ${id}:`)
+    if (novoNome != null && novoNome.length < 18)
+        headerElement.innerHTML = novoNome.toLowerCase()
+    else
+        alert("O novo nome deve conter no maximo 18 caracteres.")
+}
+
+function reduzPontos(id){
+    headerElement = document.querySelector(`.time${id} h1`)
+    valor = parseInt(headerElement.innerHTML)
+    valor -= 50
+
+    headerElement.innerHTML = Math.max(valor, 0)
+}
+
+function incrementaPontos(id){
+    headerElement = document.querySelector(`.time${id} h1`)
+    valor = parseInt(headerElement.innerHTML)
+    valor += 50
+
+    headerElement.innerHTML = Math.min(9950, valor)
+}
+
+function fecharQuestao(){
+    document.querySelector(`.questoes`).style.display = "none"
 }
 
 let conteudoCartas = sorteiaCartas()

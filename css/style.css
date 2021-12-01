@@ -42,12 +42,15 @@ body{
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.7s ease;
+
+    cursor: pointer;
 }
 
 .card:hover{
     background-color: var(--white);
     color: var(--light-blue);
     border-radius: 5px;
+
 }
 
 .card .frente{
@@ -91,7 +94,20 @@ body{
 
 .descr {
     width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.infos {
+    padding-top: 50px;
+}
+
+.info{
+    display: flex;
+    margin: 20px;
+}
+
 
 .descr .infos{
     display: flex;
@@ -108,10 +124,9 @@ body{
     margin-top: 100px;
 }
 
-.descr .infos div{
+.descr .infos:nth-child(-n+2){
     display: flex;
     margin: 20px;
-    cursor: pointer;
 }
 
 .descr .infos h2{
@@ -121,12 +136,11 @@ body{
     overflow: hidden;
 }
 
-.descr .infos .pontos{
+.descr .infos .placar{
     height: 175px;
     width: 100%;
     font-size: 25px;
     margin-left: 10px;
-    cursor: initial;
 
     display: flex;
     
@@ -137,6 +151,11 @@ body{
     width: 5px;
     height: 90%;
     background: #e5f3f383;
+    margin: 10px;
+}
+
+header{
+    cursor: pointer;
 }
 
 .time1 {
@@ -155,15 +174,46 @@ body{
     
     display: flex;
     flex-direction: column;
+    text-overflow: unset;
 }
 
+.placar{
+    margin-top: 50px;
+}
 
-.pontos h1{
+.placar h1{
     text-align: center;
     font-size: 75px;
     margin: 10px;
+    cursor: initial;
 }
 
-.pontos h3{
+.placar h3{
     text-align: center;
+    cursor: initial;
+}
+
+.pontos{
+    display: flex;
+    text-align: center;
+    line-height: 40px;
+    justify-content: space-around;
+}
+
+.pontos .mais{
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/mais.png");
+    background-size: 40px;
+}
+
+.pontos .menos{
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/menos.png");
+    background-size: 40px;
+}
+
+.creditos{
+    transform: translateY(-10px);
 }
