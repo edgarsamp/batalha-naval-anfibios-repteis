@@ -75,11 +75,12 @@ body{
     font-size: 30px;
     transform: rotateY(180deg);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 80%;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+/* 
 .card .narval{
     background-image: url("../img/narval.svg");
 }
@@ -91,6 +92,13 @@ body{
 .card .questao{
     background-image: url("../img/questao.svg");
     background-size: 35%;
+} */
+
+.card img{
+    max-height: 70px;
+    max-width: 70px;
+    height: auto;
+    width: auto;
 }
 
 .flipCard{

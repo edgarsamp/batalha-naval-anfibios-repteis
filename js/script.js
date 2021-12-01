@@ -17,7 +17,7 @@ function constroiJogo(){
         var carta = ""
         carta += `<div class="card" id = "${i}" onclick="revela(${i})">`
         carta += `    <div class="frente">${calculaPosicao(i)}</div>`
-        carta += `    <div class="verso ${retornaConteudoCarta(i)}"></div>`
+        carta += `    <div class="verso"><img src="./img/${retornaConteudoCarta(i)}.svg" alt="${retornaConteudoCarta(i)}"></div>`
         carta += `</div>\n`
 
         jogoElement.innerHTML += carta
