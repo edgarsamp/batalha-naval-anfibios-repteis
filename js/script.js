@@ -2,11 +2,25 @@ const QUANTIDADE_CELULAS = 25
 const QUANTIDADE_BOMBAS = 10
 const QUANTIDADE_NARVAL = 3
 const QUANTIDADE_QUESTOES = 12
+
 let contQuestoes = 1
 let revelando = false
 
 function revela(i){
     if (revelando) return
+    switch (retornaConteudoCarta(i)) {
+        case "questao":
+            qntQuestoes--
+            break;
+        case "narval":
+            qntBonus--
+            break;
+        case "bomba":
+            qntBombas--
+            break;
+        default:
+            break;
+    }
 
     const card = document.getElementById(i)
     card.classList.toggle("flipCard")
@@ -21,14 +35,20 @@ function revela(i){
 
             document.querySelector(`.questoes`).style.display = "flex"
             revelando = false
+            atualizaDescricao()
         }, 1000);
     }else
-        setTimeout(() => revelando = false, 1000)
-    
+        setTimeout(() => {
+            revelando = false
+            atualizaDescricao()
+        }, 1000)
+
     
 }
 
 function constroiJogo(){
+
+    atualizaDescricao()
 
     var jogoElement = document.querySelector('.jogo')
     jogoElement.innerHTML = ""
@@ -101,6 +121,20 @@ function fecharQuestao(){
     document.querySelector(`.questoes`).style.display = "none"
 }
 
+function atualizaDescricao(){
+    const bombasElement = document.querySelector(`.bombas h2`)
+    bombasElement.innerHTML = `Quantitade de bombas: ${qntBombas}`
+    
+    const questElement = document.querySelector(`.perguntas h2`)
+    questElement.innerHTML = `Quantitade de questões: ${qntQuestoes}`
+    
+    const bonusElement = document.querySelector(`.bonus h2`)
+    bonusElement.innerHTML = `Quantitade de bônus: ${qntBonus}`
+}
+
 let conteudoCartas = sorteiaCartas()
+let qntBombas = QUANTIDADE_BOMBAS
+let qntQuestoes = QUANTIDADE_QUESTOES
+let qntBonus = QUANTIDADE_NARVAL
 
 constroiJogo()
