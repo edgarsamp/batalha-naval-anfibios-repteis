@@ -1,49 +1,86 @@
-.questoes{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
+.questoes {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 
-    background-color: #e5f3f383;
-    z-index: 9999;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: #e5f3f383;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.questao{
-    height: 80%;
-    width: 60%;
-    background-color: var(--white);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.questao {
+  height: 80%;
+  width: 60%;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.questao .botao{
-    margin: 10px;
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: red;
-    border-radius: 50%;
+.questao .botao {
+  margin: 10px;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: red;
+  border-radius: 50%;
+  transform: translateX(-20px);
 }
 
-.questao header{
-    width: 100%;
-    font-size: 50px;
-    text-align: center;
-    cursor: initial;
-    margin-top: 10px;
+.questao header {
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  cursor: initial;
+  margin-top: 10px;
 }
 
-.questao .texto{
-    padding: 20px;
-    width: 95%;
-    height: 75%;
-    font-size: 19px;
-    text-align: justify;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.questao .texto {
+  padding: 20px;
+  width: 95%;
+  height: 75%;
+  font-size: 22px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.questao .texto ol {
+  list-style: lower-alpha;
+  width: 100%;
+}
+
+.questao .texto li:first-of-type {
+  margin-top: 50px;
+}
+
+.questao .texto li {
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.questao .texto div {
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  font-size: 30px;
+  align-items: center;
+}
+
+.questao .texto h2 {
+  font-size: 50px;
+  color: red;
+}
+
+.questao .texto h2:first-of-type {
+  color: green;
 }

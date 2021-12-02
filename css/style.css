@@ -1,215 +1,212 @@
 :root {
-    --blue: #005AA7;
-    --dark-blue: #003249;
-    --light-blue: #84BDDB;
-    --white: #E5F3F3;
-  }
-
-body{
-    font-family: 'Acme', sans-serif;
-    background-image: url("../img/background.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+  --blue: #005aa7;
+  --dark-blue: #003249;
+  --light-blue: #84bddb;
+  --white: #e5f3f3;
 }
 
-.pagina{
-    display: flex;
-    height: 100vh;
+body {
+  font-family: "Acme", sans-serif;
+  background-image: url("../img/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-.jogo{
-    width: 585px;
-    height: 560px;
-    background-color: var(--blue);
-    
-	display: grid;
-	grid-template-columns: repeat(5, 100px);
-	grid-template-rows: repeat(5, 100px);
-	grid-gap: 10px;
+.pagina {
+  display: flex;
+  height: 100vh;
+}
 
-    margin: auto;
-    padding-top: 15px;
-	justify-content: center;
+.jogo {
+  width: 585px;
+  height: 560px;
+  background-color: var(--blue);
 
-    border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-gap: 10px;
+
+  margin: auto;
+  padding-top: 15px;
+  justify-content: center;
+
+  border-radius: 10px;
+}
+
+.card {
+  background-color: var(--light-blue);
+  color: var(--white);
+  border-radius: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--white);
+  color: var(--light-blue);
+  border-radius: 5px;
+}
+
+.card .frente {
+  position: absolute;
+  backface-visibility: hidden;
+  height: 30px;
+  text-align: right;
+  font-size: 30px;
+  margin-top: 70px;
+  margin-right: 5px;
+
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.card .verso {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  font-size: 30px;
+  transform: rotateY(180deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
-.card{
-    background-color: var(--light-blue);
-    color: var(--white);
-    border-radius: 5px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.7s ease;
-
-    cursor: pointer;
+.card img {
+  max-height: 70px;
+  max-width: 70px;
+  height: auto;
+  width: auto;
 }
 
-.card:hover{
-    background-color: var(--white);
-    color: var(--light-blue);
-    border-radius: 5px;
-
-}
-
-.card .frente{
-    position: absolute;
-    backface-visibility: hidden;
-    height: 30px;
-    text-align: right;
-    font-size: 30px;
-    margin-top: 70px;
-    margin-right: 5px;
-
-    padding-left: 5px;
-    padding-bottom: 5px;
-}
-
-.card .verso{
-    position: absolute;
-    backface-visibility: hidden;
-    width: 100%;
-    height: 100%;
-    text-align: right;
-    font-size: 30px;
-    transform: rotateY(180deg);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.card img{
-    max-height: 70px;
-    max-width: 70px;
-    height: auto;
-    width: auto;
-}
-
-.flipCard{
-    transform: rotateY(180deg);
+.flipCard {
+  transform: rotateY(180deg);
 }
 
 .descr {
-    width: 35vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .infos {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
-.info{
-    display: flex;
-    margin: 20px;
+.info {
+  display: flex;
+  margin: 20px;
 }
 
-
-.descr .infos{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.descr .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.descr .infos img{
-    height: 50px;
-    width: 50px;
+.descr .infos img {
+  height: 50px;
+  width: 50px;
 }
 
-.descr .infos:first-child{
-    margin-top: 100px;
+.descr .infos:first-child {
+  margin-top: 100px;
 }
 
-.descr .infos:nth-child(-n+2){
-    display: flex;
-    margin: 20px;
+.descr .infos:nth-child(-n + 2) {
+  display: flex;
+  margin: 20px;
 }
 
-.descr .infos h2{
-    width: 200px;
-    font-size: 25px;
-    margin-left: 10px;
-    overflow: hidden;
+.descr .infos h2 {
+  width: 200px;
+  font-size: 25px;
+  margin-left: 10px;
+  overflow: hidden;
 }
 
-.descr .infos .placar{
-    height: 175px;
-    width: 100%;
-    font-size: 25px;
-    margin-left: 10px;
+.descr .infos .placar {
+  height: 175px;
+  width: 100%;
+  font-size: 25px;
+  margin-left: 10px;
 
-    display: flex;
-    
-    text-align: center;
+  display: flex;
+
+  text-align: center;
 }
 
-.sep{
-    width: 5px;
-    height: 90%;
-    background: #e5f3f383;
-    margin: 10px;
+.sep {
+  width: 5px;
+  height: 90%;
+  background: #e5f3f383;
+  margin: 10px;
 }
 
-header{
-    cursor: pointer;
+header {
+  cursor: pointer;
 }
 
 .time1 {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .time2 {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    
-    display: flex;
-    flex-direction: column;
-    text-overflow: unset;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+
+  display: flex;
+  flex-direction: column;
+  text-overflow: unset;
 }
 
-.placar{
-    margin-top: 50px;
+.placar {
+  margin-top: 50px;
 }
 
-.placar h1{
-    text-align: center;
-    font-size: 75px;
-    margin: 10px;
-    cursor: initial;
+.placar h1 {
+  text-align: center;
+  font-size: 75px;
+  margin: 10px;
+  cursor: initial;
 }
 
-.placar h3{
-    text-align: center;
-    cursor: initial;
+.placar h3 {
+  text-align: center;
+  cursor: initial;
 }
 
-.pontos{
-    display: flex;
-    text-align: center;
-    line-height: 40px;
-    justify-content: space-around;
+.pontos {
+  display: flex;
+  text-align: center;
+  line-height: 40px;
+  justify-content: space-around;
 }
 
-.pontos .mais img{
-    width: 40px;
-    height: 40px;
+.pontos .mais img {
+  width: 40px;
+  height: 40px;
 }
 
-.pontos .menos img{
-    width: 40px;
-    height: 40px;
+.pontos .menos img {
+  width: 40px;
+  height: 40px;
 }
 
-.creditos{
-    transform: translateY(-10px);
+.creditos {
+  transform: translateY(-10px);
 }

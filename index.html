@@ -1,90 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Batalha narval</title>
 
+    <link rel="stylesheet" href="css/resetCss.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/questoes.css" />
 
-    <link rel="stylesheet" href="css/resetCss.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/questoes.css">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="questoes">
-        <div class="questao">
-            <div class="botao" onclick="fecharQuestao()"></div>
-            <header>
-                Questão 1
-            </header>
-            <div class="texto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur ante vitae tristique fermentum. Morbi vel molestie arcu, in ultricies nibh. Donec non dui metus. Aenean molestie suscipit ultrices. Suspendisse laoreet nunc eget metus lacinia, in mollis turpis tincidunt. In hac habitasse platea dictumst. In venenatis elit sed quam accumsan luctus. Curabitur eu porttitor lorem. In tincidunt leo sed rhoncus tempor. Duis sit amet risus quis mauris auctor egestas ut hendrerit eros. Suspendisse potenti. Quisque elementum venenatis nibh non ornare. Maecenas posuere molestie congue. Nunc quis elementum ex. Sed quis consequat velit, quis viverra ligula.
-
-                Aenean efficitur nibh et augue vulputate pretium. Vestibulum ex eros, ullamcorper id aliquam sed, scelerisque ac quam. Ut eget erat et nisl ultrices iaculis. Pellentesque aliquam sagittis mauris quis elementum. Proin semper vestibulum lacus ut accumsan. Nullam vel mollis velit. Vestibulum vel lacus pharetra, porttitor magna vel, tincidunt risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi vulputate sollicitudin metus, sed suscipit arcu bibendum nec.
-                
-                Vestibulum vestibulum sit amet ligula sit amet dictum. Morbi pretium metus eu eros porta, quis fermentum dolor luctus. In viverra tortor id fringilla tincidunt. Proin quis justo aliquam, commodo sem tristique, sodales risus. Suspendisse leo orci, ultrices eu nulla et, mollis fringilla libero. Praesent commodo tempor massa, a ultrices nibh consequat non. Cras porttitor elementum velit, eget cursus ante sagittis ut. Aenean a luctus nibh, non ultrices leo. Duis lobortis venenatis justo in sodales. Ut justo libero, tristique in odio in, convallis consectetur diam. Morbi lacus lacus, tincidunt at ornare nec, dictum ac dui. Nullam euismod pharetra est ac posuere. Nunc ultrices a sem quis vulputate. Donec cursus molestie lacus, eget rutrum justo sagittis in. Donec vitae consectetur odio. Sed commodo ipsum nec nunc rutrum, ac lacinia nisi gravida.
-            </div>
+      <div class="questao">
+        <div class="botao" onclick="fecharQuestao()"></div>
+        <header>Questão 1</header>
+        <div class="texto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          efficitur ante vitae tristique fermentum. Morbi vel molestie arcu, in
+          ultricies nibh. Donec non dui metus. Aenean molestie suscipit
+          ultrices. Suspendisse laoreet nunc eget metus lacinia, in mollis
+          turpis tincidunt. In hac habitasse platea dictumst. In venenatis elit
+          sed quam accumsan luctus. Curabitur eu porttitor lorem. In tincidunt
+          leo sed rhoncus tempor. Duis sit amet risus quis mauris auctor egestas
+          ut hendrerit eros. Suspendisse potenti. Quisque elementum venenatis 
+          nibh non ornare. Maecenas posuere molestie congue. Nunc quis elementum
+          ex. Sed quis consequat velit, quis viverra ligula. Aenean efficitur
+          nibh et augue vulputate pretium. Vestibulum ex eros, ullamcorper id
+          aliquam sed, scelerisque ac quam. Ut eget erat et nisl ultrices
+          iaculis. Pellentesque aliquam sagittis mauris quis elementum. Proin
+          semper vestibulum lacus ut accumsan. Nullam vel mollis velit.
+          Vestibulum vel lacus pharetra, porttitor magna vel, tincidunt risus.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos himenaeos. Morbi vulputate sollicitudin metus, sed
+          suscipit arcu bibendum nec. Vestibulum vestibulum sit amet ligula sit
+          amet dictum. Morbi pretium metus eu eros porta, quis fermentum dolor
+          luctus. In viverra tortor id fringilla tincidunt. Proin quis justo
+          aliquam, commodo sem tristique, sodales risus. Suspendisse leo orci,
+          ultrices eu nulla et, mollis fringilla libero. Praesent commodo tempor
+          massa, a ultrices nibh consequat non. Cras porttitor elementum velit,
+          eget cursus ante sagittis ut. Aenean a luctus nibh, non ultrices leo.
+          Duis lobortis venenatis justo in sodales. Ut justo libero, tristique
+          in odio in, convallis consectetur diam. Morbi lacus lacus, tincidunt
+          at ornare nec, dictum ac dui. Nullam euismod pharetra est ac posuere.
+          Nunc ultrices a sem quis vulputate. Donec cursus molestie lacus, eget
+          rutrum justo sagittis in. Donec vitae consectetur odio. Sed commodo
+          ipsum nec nunc rutrum, ac lacinia nisi gravida.
         </div>
+      </div>
     </div>
     <div class="pagina">
-        <div class="jogo">
-            <img src="./img/bomba.svg" alt="Bomba">
-        </div>
-        <div class="descr">
-            <div class="infos">
-                <div class="info bombas">
-                    <img src="./img/bomba.svg" alt="Bomba">
-                    <h2>Quantitade de bombas: 10</h2>
+      <div class="jogo">
+        <img src="./img/bomba.svg" alt="Bomba" />
+      </div>
+      <div class="descr">
+        <div class="infos">
+          <div class="info bombas">
+            <img src="./img/bomba.svg" alt="Bomba" />
+            <h2>Quantitade de bombas: 10</h2>
+          </div>
+          <div class="info perguntas">
+            <img src="./img/questao.svg" alt="Questão" />
+            <h2>Quantitade de bombas: 10</h2>
+          </div>
+          <div class="info bonus">
+            <img src="./img/narval.svg" alt="Bonus" />
+            <h2>Quantitade de bonus: 10</h2>
+          </div>
+          <div class="placar">
+            <div class="time1">
+              <header ondblclick="mudarNome(1)">Time 1</header>
+              <h1>50</h1>
+              <div class="pontos">
+                <div class="menos" onclick="reduzPontos(1)">
+                  <img src="./img/menos.png" alt="menos" />
                 </div>
-                <div class="info perguntas">
-                    <img src="./img/questao.svg" alt="Questão">
-                    <h2>Quantitade de bombas: 10</h2>
+                <h3>pontos</h3>
+                <div class="mais" onclick="incrementaPontos(1)">
+                  <img src="./img/mais.png" alt="mais" />
                 </div>
-                <div class="info bonus">
-                    <img src="./img/narval.svg" alt="Bonus">
-                    <h2>Quantitade de bonus: 10</h2>
-                </div>
-                <div class="placar">
-                    <div class="time1">
-                        <header ondblclick="mudarNome(1)">Time 1</header>
-                        <h1>50</h1>
-                        <div class="pontos">
-                            <div class="menos" onclick="reduzPontos(1)">
-                                <img src="./img/menos.png" alt="menos">
-                            </div>
-                            <h3>pontos</h3>
-                            <div class="mais" onclick="incrementaPontos(1)">
-                                <img src="./img/mais.png" alt="mais">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sep"></div>
-                    <div class="time2">
-                        <header ondblclick="mudarNome(2)">Time 2</header>
-                        <h1>150</h1>
-                        <div class="pontos">
-                            <div class="menos" onclick="reduzPontos(2)">
-                                <img src="./img/menos.png" alt="menos">
-                            </div>
-                            <h3>pontos</h3>
-                            <div class="mais" onclick="incrementaPontos(2)">
-                                <img src="./img/mais.png" alt="mais">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="sep"></div>
+            <div class="time2">
+              <header ondblclick="mudarNome(2)">Time 2</header>
+              <h1>150</h1>
+              <div class="pontos">
+                <div class="menos" onclick="reduzPontos(2)">
+                  <img src="./img/menos.png" alt="menos" />
+                </div>
+                <h3>pontos</h3>
+                <div class="mais" onclick="incrementaPontos(2)">
+                  <img src="./img/mais.png" alt="mais" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
