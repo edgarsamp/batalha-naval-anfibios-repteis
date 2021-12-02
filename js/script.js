@@ -152,7 +152,7 @@ const bancoQuestoes = [
   "Qual a diferença entre Chondrichthyes e Osteichthyes?",
   "Tubarão possui bexiga natatória. <div><h2> Certo </h2> ou <h2>Errado</h2></div>",
   "Qual a diferença entre um cágado, um jabuti e uma tartaruga?",
-  "o que são organismos endotérmicos e exotérmicos? Cite um exemplo de cada.",
+  "O que são organismos endotérmicos e exotérmicos? Cite um exemplo de cada.",
   "Quais as principais diferenças entre um réptil e um anfíbio?",
   "(ENEM 2015) Os anfíbios representam o primeiro grupo de vertebrados que, evolutivamente, conquistou o ambiente terrestre.  pesar disso, a sobrevivência do grupo ainda permanece restrita a ambientes úmidos ou aquáticos, devido à manutenção de algumas características fisiológicas relacionadas à água. <br> <br> Uma das características a que o texto se refere é a: <br> <ol> <li>Reprodução por viviparidade.</li> <li>Respiração pulmonar nos adultos.</li> <li>Regulação térmica por endotermia.</li> <li>Cobertura corporal delgada e altamente permeável.</li> <li>Locomoção por membros anteriores e posteriores desenvolvidos.</li> </ol>",
   "Observe a tira abaixo:<br> O invertebrado, observado por Mafalda, pertence ao filo que, evolutivamente, é o mais próximo dos cordados, por apresentarem:<br> <ol> <li>Hábitat marinho</li> <li>Mesoderme</li> <li>Deuterostomia</li> <li>Fecundação externa</li> <li>Simetria radial</li> </ol>",
