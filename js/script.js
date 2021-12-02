@@ -9,6 +9,7 @@ let revelando = false;
 function revela(i) {
   if (revelando) return;
   if (revelados.has(i)) return;
+
   revelados.add(i);
   switch (retornaConteudoCarta(i)) {
     case "questao":
@@ -50,7 +51,8 @@ function revela(i) {
 function constroiQuestao() {
   var jogoElement = document.querySelector(".questao .texto");
 
-  if (questoesAleat.length > 0) jogoElement.innerHTML = bancoQuestoes[questoesAleat.shift()];
+  if (questoesAleat.length > 0)
+    jogoElement.innerHTML = bancoQuestoes[questoesAleat.shift()];
   else alert("Acabaram as questoes 😞");
 }
 
@@ -145,7 +147,7 @@ let qntBonus = QUANTIDADE_NARVAL;
 let revelados = new Set();
 
 const bancoQuestoes = [
-  "O que define um Cordado?",
+  "Qual é a funçao da bexiga natatória e da linha lateral?",
   "Cite 1 representante de cada Classe estudada.",
   "O que diferencia jacaré de crocodilo?",
   "O que diferencia sapo, perereca e rã?",
@@ -155,7 +157,7 @@ const bancoQuestoes = [
   "O que são organismos endotérmicos e exotérmicos? Cite um exemplo de cada.",
   "Quais as principais diferenças entre um réptil e um anfíbio?",
   "(ENEM 2015) Os anfíbios representam o primeiro grupo de vertebrados que, evolutivamente, conquistou o ambiente terrestre.  pesar disso, a sobrevivência do grupo ainda permanece restrita a ambientes úmidos ou aquáticos, devido à manutenção de algumas características fisiológicas relacionadas à água. <br> <br> Uma das características a que o texto se refere é a: <br> <ol> <li>Reprodução por viviparidade.</li> <li>Respiração pulmonar nos adultos.</li> <li>Regulação térmica por endotermia.</li> <li>Cobertura corporal delgada e altamente permeável.</li> <li>Locomoção por membros anteriores e posteriores desenvolvidos.</li> </ol>",
-  "Observe a tira abaixo:<br> O invertebrado, observado por Mafalda, pertence ao filo que, evolutivamente, é o mais próximo dos cordados, por apresentarem:<br> <ol> <li>Hábitat marinho</li> <li>Mesoderme</li> <li>Deuterostomia</li> <li>Fecundação externa</li> <li>Simetria radial</li> </ol>",
+  "Qual a função do óperculo?",
   "Os peixes de esqueleto cartilaginoso não são considerados vertebrados. <div><h2> Certo </h2> ou <h2>Errado</h2></div>",
 ];
 
