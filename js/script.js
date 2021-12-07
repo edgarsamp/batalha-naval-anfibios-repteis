@@ -1,7 +1,7 @@
 const QUANTIDADE_CELULAS = 25;
 const QUANTIDADE_BOMBAS = 10;
-const QUANTIDADE_NARVAL = 3;
-const QUANTIDADE_QUESTOES = 12;
+const QUANTIDADE_NARVAL = 4;
+const QUANTIDADE_QUESTOES = 11;
 
 let contQuestoes = 1;
 let revelando = false;
@@ -68,7 +68,8 @@ function constroiJogo() {
     carta += `    <div class="frente">${calculaPosicao(i)}</div>`;
     carta += `    <div class="verso"><img src="./img/${retornaConteudoCarta(
       i
-    )}.svg" alt="${retornaConteudoCarta(i)}"></div>`;
+    )}.svg"
+                    alt="${retornaConteudoCarta(i)}"></div>`;
     carta += `</div>\n`;
 
     jogoElement.innerHTML += carta;
@@ -147,18 +148,17 @@ let qntBonus = QUANTIDADE_NARVAL;
 let revelados = new Set();
 
 const bancoQuestoes = [
-  "Qual é a funçao da bexiga natatória e da linha lateral?",
-  "Cite 1 representante de cada Classe estudada.",
-  "O que diferencia jacaré de crocodilo?",
-  "O que diferencia sapo, perereca e rã?",
-  "Qual a diferença entre Chondrichthyes e Osteichthyes?",
-  "Tubarão possui bexiga natatória. <div><h2> Certo </h2> ou <h2>Errado</h2></div>",
-  "Qual a diferença entre um cágado, um jabuti e uma tartaruga?",
-  "O que são organismos endotérmicos e exotérmicos? Cite um exemplo de cada.",
-  "Quais as principais diferenças entre um réptil e um anfíbio?",
-  "(ENEM 2015) Os anfíbios representam o primeiro grupo de vertebrados que, evolutivamente, conquistou o ambiente terrestre.  pesar disso, a sobrevivência do grupo ainda permanece restrita a ambientes úmidos ou aquáticos, devido à manutenção de algumas características fisiológicas relacionadas à água. <br> <br> Uma das características a que o texto se refere é a: <br> <ol> <li>Reprodução por viviparidade.</li> <li>Respiração pulmonar nos adultos.</li> <li>Regulação térmica por endotermia.</li> <li>Cobertura corporal delgada e altamente permeável.</li> <li>Locomoção por membros anteriores e posteriores desenvolvidos.</li> </ol>",
-  "Qual a função do óperculo?",
-  "Os peixes de esqueleto cartilaginoso não são considerados vertebrados. <div><h2> Certo </h2> ou <h2>Errado</h2></div>",
+  "Qual a diferença entre mamíferos prototérios, metatérios e eutérios? Dê um exemplo de cada.",
+  "Cite duas adaptações que facilitam o vôo nas aves.",
+  "O que define a classe mamalia?",
+  "Que característica as aves e os mamíferos possuem que os permitem ser mais ativos, independente das condições ambientais?",
+  "Qual a função da moela?",
+  "Qual a função do sacos aéreos?",
+  "As aves e mamíferos surgiram após a extinção dos dinossauros. <div><h2> Certo </h2> ou <h2>Errado</h2></div>",
+  "Qual a função da glândula uropigial?",
+  "Como são os ossos das aves?",
+  "Diferencie aves ratitas de carinatas.",
+  "Explique a principal teoria sobre a evolução da placenta.",
 ];
 
 questoesAleat = Array.from(Array(QUANTIDADE_QUESTOES).keys());
