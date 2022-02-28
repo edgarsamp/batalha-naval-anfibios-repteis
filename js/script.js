@@ -12,14 +12,14 @@ function revela(i) {
 
   revelados.add(i);
   switch (retornaConteudoCarta(i)) {
-    case "questao":
+    case 'questao':
       constroiQuestao();
       qntQuestoes--;
       break;
-    case "narval":
+    case 'narval':
       qntBonus--;
       break;
-    case "bomba":
+    case 'bomba':
       qntBombas--;
       break;
     default:
@@ -27,17 +27,17 @@ function revela(i) {
   }
 
   const card = document.getElementById(i);
-  card.classList.toggle("flipCard");
+  card.classList.toggle('flipCard');
   revelando = true;
-  if (retornaConteudoCarta(i) == "questao") {
+  if (retornaConteudoCarta(i) == 'questao') {
     setTimeout(function () {
-      const headerQuestao = document.querySelector(".questao header");
-      headerQuestao.innerHTML = "Questão " + contQuestoes;
+      const headerQuestao = document.querySelector('.questao header');
+      headerQuestao.innerHTML = 'Questão ' + contQuestoes;
       contQuestoes++;
 
-      const questaoConteudo = document.querySelector(".questao .texto");
+      const questaoConteudo = document.querySelector('.questao .texto');
 
-      document.querySelector(`.questoes`).style.display = "flex";
+      document.querySelector(`.questoes-modal`).style.display = 'flex';
       revelando = false;
       atualizaDescricao();
     }, 1000);
@@ -49,26 +49,24 @@ function revela(i) {
 }
 
 function constroiQuestao() {
-  var jogoElement = document.querySelector(".questao .texto");
+  var jogoElement = document.querySelector('.questao .texto');
 
   if (questoesAleat.length > 0)
     jogoElement.innerHTML = bancoQuestoes[questoesAleat.shift()];
-  else alert("Acabaram as questoes 😞");
+  else alert('Acabaram as questoes 😞');
 }
 
 function constroiJogo() {
   atualizaDescricao();
 
-  var jogoElement = document.querySelector(".jogo");
-  jogoElement.innerHTML = "";
+  var jogoElement = document.querySelector('.jogo');
+  jogoElement.innerHTML = '';
 
   for (i = 0; i < QUANTIDADE_CELULAS; i++) {
-    var carta = "";
+    var carta = '';
     carta += `<div class="card" id = "${i}" onclick="revela(${i})">`;
     carta += `    <div class="frente">${calculaPosicao(i)}</div>`;
-    carta += `    <div class="verso"><img src="./img/${retornaConteudoCarta(
-      i
-    )}.svg"
+    carta += `    <div class="verso"><img src="./img/${retornaConteudoCarta(i)}.svg"
                     alt="${retornaConteudoCarta(i)}"></div>`;
     carta += `</div>\n`;
 
@@ -77,7 +75,7 @@ function constroiJogo() {
 }
 
 function calculaPosicao(i) {
-  letra = ["A", "B", "C", "D", "E"];
+  letra = ['A', 'B', 'C', 'D', 'E'];
   ret = letra[Math.trunc(i / 5)];
 
   return ret + ((i % 5) + 1);
@@ -97,9 +95,9 @@ function sorteiaCartas() {
 
 function retornaConteudoCarta(id) {
   var index = conteudoCartas.indexOf(id);
-  if (index < QUANTIDADE_BOMBAS) return "bomba";
-  else if (index < QUANTIDADE_NARVAL + QUANTIDADE_BOMBAS) return "narval";
-  return "questao";
+  if (index < QUANTIDADE_BOMBAS) return 'bomba';
+  else if (index < QUANTIDADE_NARVAL + QUANTIDADE_BOMBAS) return 'narval';
+  return 'questao';
 }
 
 function mudarNome(id) {
@@ -107,7 +105,7 @@ function mudarNome(id) {
   var novoNome = prompt(`Digite o novo nome para a equipe ${id}:`);
   if (novoNome != null && novoNome.length < 18)
     headerElement.innerHTML = novoNome.toLowerCase();
-  else alert("O novo nome deve conter no maximo 18 caracteres.");
+  else alert('O novo nome deve conter no maximo 18 caracteres.');
 }
 
 function reduzPontos(id) {
@@ -127,7 +125,7 @@ function incrementaPontos(id) {
 }
 
 function fecharQuestao() {
-  document.querySelector(`.questoes`).style.display = "none";
+  document.querySelector(`.questoes-modal`).style.display = 'none';
 }
 
 function atualizaDescricao() {
@@ -148,17 +146,17 @@ let qntBonus = QUANTIDADE_NARVAL;
 let revelados = new Set();
 
 const bancoQuestoes = [
-  "Qual a diferença entre mamíferos prototérios, metatérios e eutérios? Dê um exemplo de cada.",
-  "Cite duas adaptações que facilitam o vôo nas aves.",
-  "O que define a classe mamalia?",
-  "Que característica as aves e os mamíferos possuem que os permitem ser mais ativos, independente das condições ambientais?",
-  "Qual a função da moela?",
-  "Qual a função do sacos aéreos?",
-  "As aves e mamíferos surgiram após a extinção dos dinossauros. <div><h2> Certo </h2> ou <h2>Errado</h2></div>",
-  "Qual a função da glândula uropigial?",
-  "Como são os ossos das aves?",
-  "Diferencie aves ratitas de carinatas.",
-  "Explique a principal teoria sobre a evolução da placenta.",
+  'Qual a diferença entre mamíferos prototérios, metatérios e eutérios? Dê um exemplo de cada.',
+  'Cite duas adaptações que facilitam o vôo nas aves.',
+  'O que define a classe mamalia?',
+  'Que característica as aves e os mamíferos possuem que os permitem ser mais ativos, independente das condições ambientais?',
+  'Qual a função da moela?',
+  'Qual a função do sacos aéreos?',
+  'As aves e mamíferos surgiram após a extinção dos dinossauros. <div><h2> Certo </h2> ou <h2>Errado</h2></div>',
+  'Qual a função da glândula uropigial?',
+  'Como são os ossos das aves?',
+  'Diferencie aves ratitas de carinatas.',
+  'Explique a principal teoria sobre a evolução da placenta.',
 ];
 
 questoesAleat = Array.from(Array(QUANTIDADE_QUESTOES).keys());
