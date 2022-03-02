@@ -1,7 +1,7 @@
 const QUANTIDADE_CELULAS = 25;
-const QUANTIDADE_BOMBAS = 10;
+const QUANTIDADE_BOMBAS = 6;
 const QUANTIDADE_NARVAL = 4;
-const QUANTIDADE_QUESTOES = 11;
+const QUANTIDADE_QUESTOES = 15;
 
 let contQuestoes = 1;
 let revelando = false;
@@ -130,13 +130,13 @@ function fecharQuestao() {
 
 function atualizaDescricao() {
   const bombasElement = document.querySelector(`.bombas h2`);
-  bombasElement.innerHTML = `Quantitade de bombas: ${qntBombas}`;
+  bombasElement.innerHTML = `Quantidade de bombas: <b>${qntBombas}</b>`;
 
   const questElement = document.querySelector(`.perguntas h2`);
-  questElement.innerHTML = `Quantitade de questões: ${qntQuestoes}`;
+  questElement.innerHTML = `Quantidade de questões:  <b>${qntQuestoes}</b>`;
 
   const bonusElement = document.querySelector(`.bonus h2`);
-  bonusElement.innerHTML = `Quantitade de bônus: ${qntBonus}`;
+  bonusElement.innerHTML = `Quantidade de bônus:  <b>${qntBonus}</b>`;
 }
 
 let conteudoCartas = sorteiaCartas();
@@ -146,17 +146,21 @@ let qntBonus = QUANTIDADE_NARVAL;
 let revelados = new Set();
 
 const bancoQuestoes = [
-  'Qual a diferença entre mamíferos prototérios, metatérios e eutérios? Dê um exemplo de cada.',
-  'Cite duas adaptações que facilitam o vôo nas aves.',
-  'O que define a classe mamalia?',
-  'Que característica as aves e os mamíferos possuem que os permitem ser mais ativos, independente das condições ambientais?',
-  'Qual a função da moela?',
-  'Qual a função do sacos aéreos?',
-  'As aves e mamíferos surgiram após a extinção dos dinossauros. <div><h2> Certo </h2> ou <h2>Errado</h2></div>',
-  'Qual a função da glândula uropigial?',
-  'Como são os ossos das aves?',
-  'Diferencie aves ratitas de carinatas.',
-  'Explique a principal teoria sobre a evolução da placenta.',
+  "Faça a transcrição e em seguida a tradução da seguinte fita de DNA: <div>AGCA AGCT AGGA AGGT AGTC AGTG ATCC ATCG ATGC ATGG CAAC CAAG CACA</div>", 
+  "Identifique o ácido Nucleicos em cada uma das seguintes fitas:", 
+  "Complete a fita simples de DNA com sua fita complementar:", 
+  "Apresente a fita de RNA que pode ser transcrita a partir da seguinte fita de DNA:", 
+  "Quais são os três tipos de RNA e quais são suas funções?", 
+  "O que são proteínas? Cite três funções que elas podem apresentar dentro da célula.", 
+  "Quais as três moléculas que compõem os nucleotídeos, partícula que compõe as moléculas de Ácidos Nucleicos?", 
+  "O que são mutações?", 
+  "As mutações gênicas ou cromossômicas só podem ser transmitidas para a prole caso ocorra nas células somáticas. <div><h2> Certo </h2> ou <h2>Errado</h2></div>", 
+  "Que tipo de mutação ocorreu com a seguinte sequência gênica?", 
+  "Os humanos são organismos diplóides. <div><h2> Certo </h2> ou <h2>Errado</h2></div>", 
+  "O que são organismos transgênicos?", 
+  "Quais são as aplicações para a técnica se DNA Fingerprint (digital)?", 
+  "Quais são os dois tipos de mutações cromossômicas numéricas conhecidas?", 
+  "Cite dois tipos de mutações estruturais que podem ocorrer em cromossomas."
 ];
 
 questoesAleat = Array.from(Array(QUANTIDADE_QUESTOES).keys());

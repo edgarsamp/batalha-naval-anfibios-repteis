@@ -37,6 +37,7 @@
   text-align: center;
   cursor: initial;
   margin-top: 10px;
+  font-weight: bolder;
 }
 
 .questao .texto {
@@ -74,6 +75,7 @@
   justify-content: space-evenly;
   font-size: 30px;
   align-items: center;
+  font-weight: bolder;
 }
 
 .questao .texto h2 {

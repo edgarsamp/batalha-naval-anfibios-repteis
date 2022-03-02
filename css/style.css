@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Acme", sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
   background: lightblue url("../img/background.svg") no-repeat fixed center;
   background-size: 100%;
 
@@ -114,6 +114,7 @@ body {
   align-items: flex-end;
 
   transform: translateY(-100px);
+  
 }
 
 .descr .infos img {
@@ -149,6 +150,11 @@ body {
   position: absolute;
   transform: translateY(250px) translateX(50px);
 }
+.descr .infos .placar h1,
+.infos h2 b{
+  font-weight: bolder;
+}
+
 
 .sep {
   width: 5px;
